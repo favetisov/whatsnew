@@ -2,9 +2,35 @@
 
 This file keeps track of my everyday learning process. Github format is pretty convenient to write down code examples and links to resources.
 
+## 11.10.2020
+### typescript project references 
+A better way to organize project that has several modules. I've created demo repository that shows 
+tsconfg's configurations:
+https://github.com/favetisov/ts-proj-ref
+A huge obstacle here was that TS does not resolve absolute paths when transpiling, so you have to either run compiled code with t
+`tsconfig-paths` or build project with tools like [Babel](https://babeljs.io/). 
+Project below has two branches that provide both approaches. 
+
+Another problem with typescript compiler is that it hasn't onSuccess/onError callback, 
+so we cannot connect test runner or server restart. One workaround here is to use `nodemon` and watch compiled files change, 
+but if we want to keep things simple, we can run build with [tsc-watch](https://github.com/gilamran/tsc-watch) that handles `tsc -b -w` output and fires onSuccess event. 
+
+
 ## 09.10.2020
+### npm autocomplete 
+run: 
+```
+npm completion >> ~/.bashrc
+npm completion >> ~/.zshrc
+```
+... and now you have tab-completion for npm!
+
 #### Shebang with ts-node
-To make `.ts` file executable we should write shebang line this way: `#!/usr/bin/env -S ts-node -r tsconfig-paths/register`  
+To make `.ts` file executable we should write shebang line this way: `#!/usr/bin/env -S ts-node -r tsconfig-paths/register`
+
+#### nodemon watch multiple folders 
+A tiny nuance when watching multiple folders in nodemon: you should provide each with separate `--watch` argument:
+`nodemon --watch api --watch stats -e ts ...`  
 
 ## 08.10.2020
 #### Typeorm migrations
