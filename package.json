@@ -29,7 +29,7 @@
     "@angular/router": "^10.1.5",
     "@angular/service-worker": "^10.1.5",
     "@ionic-native/android-permissions": "^5.28.0",
-    "@ionic-native/core": "^5.28.0",
+    "@ionic-native/core": "^5.31.1",
     "@ionic-native/device": "^5.28.0",
     "@ionic-native/facebook": "^5.28.0",
     "@ionic-native/file": "^5.28.0",
