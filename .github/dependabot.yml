@@ -1,0 +1,62 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: mongoose
+    versions:
+    - 5.11.14
+    - 5.11.15
+    - 5.11.16
+    - 5.11.17
+    - 5.11.18
+    - 5.11.19
+    - 5.12.0
+    - 5.12.1
+    - 5.12.2
+    - 5.12.3
+    - 5.12.5
+  - dependency-name: swiper
+    versions:
+    - 6.4.10
+    - 6.4.11
+    - 6.4.12
+    - 6.4.14
+    - 6.4.15
+    - 6.4.9
+    - 6.5.0
+    - 6.5.5
+    - 6.5.6
+    - 6.5.7
+  - dependency-name: "@ionic/angular"
+    versions:
+    - 5.5.3
+    - 5.5.4
+    - 5.5.5
+    - 5.6.0
+    - 5.6.1
+    - 5.6.2
+    - 5.6.3
+    - 5.6.4
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+    - 4.0.2
+  - dependency-name: "@ionic-native/firebase-authentication"
+    versions:
+    - 5.31.1
+    - 5.32.0
+  - dependency-name: "@ionic-native/core"
+    versions:
+    - 5.31.1
+    - 5.32.0
+  - dependency-name: "@ionic-native/photo-library"
+    versions:
+    - 5.31.1
+    - 5.32.0
+  - dependency-name: node-notifier
+    versions:
+    - 8.0.1
